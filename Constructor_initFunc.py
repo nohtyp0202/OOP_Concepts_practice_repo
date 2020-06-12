@@ -17,4 +17,12 @@ num2.get_data()
 num2.attr = 10
 print num2.real,num2.img,num2.attr
 
+# deleting an attribute of the object
+del num1.img
+num1.get_data()
 
+# deleting the object itself
+del num1
+print num1.get_data()
+
+# Automatic destruction of unreferenced objects in Python is also called garbage collection.
