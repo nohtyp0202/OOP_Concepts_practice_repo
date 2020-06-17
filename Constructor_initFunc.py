@@ -26,3 +26,5 @@ del num1
 print num1.get_data()
 
 # Automatic destruction of unreferenced objects in Python is also called garbage collection.
+
+
