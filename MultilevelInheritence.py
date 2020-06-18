@@ -9,17 +9,19 @@ class BaseClass1:
 
 class DerivedClass1(BaseClass1):
 
-    def __init__(self,a,b):
-        self.a = a
-        self.b = b
+    def __init__(self,x,y):
+        BaseClass1.__init__(self,x,y)
+        self.a = x
+        self.b = y
     def product(self,a,b):
         return a * b
 
 class DerivedClass2(DerivedClass1):
 
-    def __init__(self,p,q):
-        self.p = p
-        self.q = q
+    def __init__(self,x,y):
+        DerivedClass1.__init__(self,x,y)
+        self.p = x
+        self.q = y
 
     def division(self,p,q):
         return p / q
