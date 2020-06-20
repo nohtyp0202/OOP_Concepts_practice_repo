@@ -62,3 +62,30 @@ Bev_tea = Tea()
 Bev.Keyquality()
 Bev_Coffee.Keyquality()
 Bev_tea.Keyquality()
+
+
+
+# polymorphism with functions and objects
+
+class Coffee():
+    def Intro(self):
+        print "Most of the people in USA drink coffee"
+    def Keyquality(self):
+        print "Coffee can be hot, sweet and yummy.."
+
+class Tea():
+    def Intro(self):
+        print "Most of the people in UK drink tea"
+    def Keyquality(self):
+        print "Tea can be hot, sweet and yummy.."
+
+
+def func(obj):
+    obj.Intro()
+    obj.Keyquality()
+
+obj_coffee = Coffee()
+obj_tea = Tea()
+
+func(obj_coffee)
+func(obj_tea)
