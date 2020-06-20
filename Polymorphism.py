@@ -79,13 +79,15 @@ class Tea():
     def Keyquality(self):
         print "Tea can be hot, sweet and yummy.."
 
-
+# creating a function with which methods inside the classes are accessed
 def func(obj):
     obj.Intro()
     obj.Keyquality()
 
+# creatin object for the class
 obj_coffee = Coffee()
 obj_tea = Tea()
 
+# passing objects though the functions to call the methods 
 func(obj_coffee)
 func(obj_tea)
