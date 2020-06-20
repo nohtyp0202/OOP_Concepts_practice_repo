@@ -32,3 +32,32 @@ Flower_lotus = Lotus()
 for flowers in (Flower_rose,Flower_lotus):
     flowers.color()
     flowers.Grown()
+
+
+
+# Polymorphism in Inheritence
+
+
+class Beverage:
+    def Intro(self):
+        print "There are many hot beverages that are cosumed during winter"
+
+    def Keyquality(self):
+        print "Beverages can be hot, sweet and yummy.."
+
+class Coffee(Beverage):
+    def Keyquality(self):
+        print "Coffee can be hot, sweet and yummy.."
+
+class Tea(Beverage):
+    def Keyquality(self):
+        print "Tea can be hot, sweet and yummy.."
+
+
+Bev = Beverage()
+Bev_Coffee = Coffee()
+Bev_tea = Tea()
+
+Bev.Keyquality()
+Bev_Coffee.Keyquality()
+Bev_tea.Keyquality()
