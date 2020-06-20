@@ -6,6 +6,7 @@ print len("polymorphism")
 
 print len(["polymorphism", "Inheritance","Abstraction"])
 
+
 print len({"Double" : "twice", "Triple" : "Trice"})
 
 
