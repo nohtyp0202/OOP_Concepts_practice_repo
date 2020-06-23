@@ -20,3 +20,39 @@ obj2 = Base()
 # this statement will throw "AttributeError:" as protected variable is being accessed outside the class
 
 print obj1.num2
+
+
+#Private members
+class BaseClass:
+    def __init__(self):
+        self.__priv = "I am a private member"
+        self.a = "I am not a private member"
+
+    def SomeMethod(self):
+        print self.a
+        print "Trying to access private member within same class"
+        print self.__priv
+
+class DerivedClass(BaseClass):
+
+    def __init__(self):
+        BaseClass.__init__(self)
+        self.b = "I am a derived class member"
+
+
+    def SomeOtherMethod(self):
+        print self.b
+        print "Trying to access public memeber of base class"
+        print self.a
+        print "Trying to access the private member of the base class,this should throw an error"
+        print self.__priv
+        #print "Trying data mangaling but using _Classname__private member to still access private members"
+        #print self._DerivedClass__priv
+
+
+print "This is outside the classes"
+obj1 = BaseClass()
+obj2 = DerivedClass()
+
+obj1.SomeMethod()
+obj2.SomeOtherMethod()
