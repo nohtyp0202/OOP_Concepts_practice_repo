@@ -56,3 +56,25 @@ obj2 = DerivedClass()
 
 obj1.SomeMethod()
 obj2.SomeOtherMethod()
+
+
+from abc import ABC, abstractmethod
+
+class Polygon(ABC):
+
+    def noofsides(self):
+        pass
+
+class Triangle(Polygon):
+
+    def noofsides(self):
+        print "I have three sides"
+
+class Pentagon(Polygon):
+
+    def noofsides(self):
+        print "I have five sides"
+
+
+obj1 = Triangle()
+obj2 = Pentagon()
